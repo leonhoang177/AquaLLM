@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Largemouth Bass Aquaculture - 3D Visualization</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="loading">
+      <div class="spinner"></div>
+      <div>Loading simulation data...</div>
+    </div>
+
+    <h1>Largemouth Bass Aquaculture - 3D Visualization</h1>
+
+    <div id="top-bar">
+      <div id="controls">
+        <button id="btn-playpause" class="active">Pause</button>
+        <button id="btn-restart">Restart</button>
+        <button id="btn-loop">Loop: Off</button>
+
+        <div class="ctrl-divider"></div>
+
+        <div class="ctrl-group">
+          <span class="ctrl-label">Speed:</span>
+          <button id="btn-speed-down">&minus;</button>
+          <span id="speed-display">7</span>
+          <button id="btn-speed-up">&plus;</button>
+        </div>
+
+        <div class="ctrl-divider"></div>
+
+        <div class="ctrl-group">
+          <span class="ctrl-label">Jump:</span>
+          <button id="btn-jump-back">&lt;</button>
+          <button id="btn-jump-fwd">&gt;</button>
+        </div>
+
+        <div class="ctrl-divider"></div>
+
+        <div id="time-display">Day 00 | Hour 00 | Frame 0000/0000</div>
+      </div>
+
+      <div id="stats-bar"></div>
+      <div id="genotype-bar"></div>
+
+      <div id="legend">
+        <div class="legend-item">
+          <img src="icons/fish.png" class="legend-img" alt="Fish" />
+          Fish
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="background: #ff8833; border-color: #cc6611"
+          ></div>
+          Food
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="background: #55ffcc; border-color: #22aa88"
+          ></div>
+          Probiotic
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="background: rgba(255, 255, 255, 0.8); border-color: #cccccc"
+          ></div>
+          O2
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="background: #8b6914; border-color: #6a5010"
+          ></div>
+          Fecal
+        </div>
+        <div class="legend-item">
+          <img src="icons/dead_fish.png" class="legend-img" alt="Dead Fish" />
+          Dead Fish
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch rhombus"
+            style="background: #4477aa; border: 1px solid #5588bb"
+          ></div>
+          Pollutant
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="background: rgba(0, 255, 100, 0.25); border-color: #00ff64"
+          ></div>
+          NH3
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="background: rgba(255, 180, 0, 0.13); border-color: #ffb400"
+          ></div>
+          Disease
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="background: rgba(200, 80, 255, 0.1); border-color: #c850ff"
+          ></div>
+          Parasite
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch"
+            style="background: #5a3a28; border-color: #7a5a40"
+          ></div>
+          Obstacle
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="
+              background: transparent;
+              border: 2px solid #ffb400;
+              box-shadow: 0 0 3px #ffb400;
+            "
+          ></div>
+          Infected
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="
+              background: transparent;
+              border: 2px solid #cc44ff;
+              box-shadow: 0 0 3px #cc44ff;
+            "
+          ></div>
+          Parasitized
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="
+              background: transparent;
+              border: 2px solid #ff2222;
+              box-shadow: 0 0 3px #ff2222;
+            "
+          ></div>
+          &#9760; Death
+        </div>
+        <div class="legend-item">
+          <div
+            class="legend-swatch circle"
+            style="
+              background: transparent;
+              border: 2px solid #ffdd00;
+              box-shadow: 0 0 3px #ffdd00;
+            "
+          ></div>
+          &#129463; Cannibalized
+        </div>
+      </div>
+
+      <div id="progress-bar-container"><div id="progress-bar"></div></div>
+    </div>
+
+    <div id="canvas-container">
+      <div id="hud">Alive: 0 / 0</div>
+      <div id="fish-panel">
+        <div id="fish-panel-header">
+          <span id="fish-panel-title">Fish #0</span>
+          <button id="fish-panel-close">&times;</button>
+        </div>
+        <div id="fish-panel-body"></div>
+      </div>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
