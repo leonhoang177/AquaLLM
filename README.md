@@ -1,4 +1,4 @@
-# AquaLLM: AquaLLM: Adaptive Large Language Model Agents for Autonomous Aquaculture Management
+# AquaLLM: Adaptive Large Language Model Agents for Autonomous Aquaculture Management
 
 ## Overview
 
@@ -22,4 +22,4 @@ python -m http.server 8000
 
 3. Open: http://localhost:8000/visuals/index.html
 
-To compile your own simulation, run the `AquaLLM.ipynb`
+To compile your own simulation, run the `AquaLLM.ipynb`, it should yield a new `./logs/simulation_data.json` for you
