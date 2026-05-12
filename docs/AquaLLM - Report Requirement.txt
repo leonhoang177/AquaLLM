@@ -1,0 +1,70 @@
+﻿AquaLLM - Report Requirement
+
+
+Your report will need to include the following sections:
+
+
+1. Abstract(5%)
+Make sure to clearly state the novelty of your work in the abstract.
+
+
+2. Introduction(5%)
+In this section you should discuss the question you are planning to investigate. Make
+sure to describe the problem clearly, and how you are planning to solve it. Also, clarify
+what your new contribution is (as opposed to previous works).
+
+
+3. Previous Work(10%)
+Discuss the previous work you are using as a starting point/reference. If you are working on a different domain, include work that works on the same or similar domain.
+
+
+If you are using a new method, discuss other works which use similar methods. Note
+that you can use both academic papers in addition to online articles. Make sure to cite
+all sources.
+
+
+4. Technical Approach (10%)
+Describe the problem you are working on including the rules, goals, etc. Assume that
+the reader has not been introduced to this domain problem previously. Describe your
+solution architecture. If you are examining different options, describe them all. In addition, add diagrams to clarify.
+
+
+5. Dataset and Implementation (10%)
+Describe the details of your dataset (if applicable) and implementation. This should
+include things like the size of your dataset, libraries used, hardware used, etc.
+
+
+6. Experiments and Results Analysis(20%)
+Present the results which answer your hypothesis questions. These should include different graphs which clarify the answer and examine different aspects of your solution. If not described in the implementation section, make sure to carefully describe how your experiments were conducted (how many runs, how it was initialized, etc. This section is the most important, and will be evaluated both on presentation and correctness.
+
+
+7. Conclusion(5%)
+What have you achieved in this project? What have you learned?
+
+
+8. References
+Park, J. S., O'Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023).
+Generative Agents: Interactive Simulacra of Human Behavior. In Proceedings of the
+36th Annual ACM Symposium on User Interface Software and Technology (UIST '23). https://arxiv.org/abs/2304.03442
+
+
+-> We adapt this memory-driven reﬂection to environmental management, allowing our agent to "remember" past simulation days and adjust policies.
+
+
+
+
+Wang, G., Xie, Y., Jiang, Y., Mandlekar, A., Xiao, C., Zhu, Y., Fan, L., & Anandkumar, A.
+(2023). Voyager: An Open-Ended Embodied Agent with Large Language Models.
+arXiv preprint arXiv:2305.16291. https://arxiv.org/abs/2305.16291
+
+
+-> Similar to Voyager, we use tools (budget calculators) and environmental feedback to iteratively optimize its control policy.
+
+
+
+
+9. Appendices:
+Code Design(5%): Describe the general structure of your code including functions, classes, and data structures used. If you are using code written by someone else make sure to cite it and emphasize the parts that you have written yourself.
+
+
+Workload Distribution: Describe how work was divided between the team members (I’m solo in this project)
